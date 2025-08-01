@@ -11,8 +11,10 @@ CMC_API_KEY = "04530b24-633d-48d4-8c4c-75739deaf5d4"
 
 # Список отслеживаемых криптовалют
 CRYPTOS = [
-    'BTC', 'ETH', 'BNB', 'APT', 'SUI', 'DYDX', '1INCH',
-    'OP', 'ARB', 'APE', 'LDO', 'SEI', 'STRK', 'OLAS'
+    'BTC', 'ETH', 'TWT', 'APT', 'SUI', 'DYDX', '1INCH',
+    'OP', 'ARB', 'C98', 'BNB', 'MNT', 'ICP', 'APE',
+    'AMB', 'HARRY', 'XCH', 'MAS', 'LINA', 'LDO',
+    'SEI', 'LEDOG', '5IRE', 'STRK', 'SQR', 'AEVO', 'OLAS'
 ]
 
 def get_price(currency):
