@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>💰 Крипто-трекер</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #2c3e50; text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .price-up { color: green; }
+        .price-down { color: red; }
+        .source { font-size: 0.8em; color: #666; }
+        .last-updated { text-align: right; font-style: italic; color: #777; }
+    </style>
+</head>
+<body>
+    <h1>💰 Трекер криптовалют</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Криптовалюта</th>
+                <th>Цена (USDT)</th>
+                <th>Источник</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for currency, data in prices.items() %}
+            <tr>
+                <td>{{ currency }}</td>
+                <td>
+                    {% if data.price %}
+                        {{ "%.4f"|format(data.price) }}
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </td>
+                <td class="source">{{ data.source }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <div class="last-updated">
+        Последнее обновление: {{ now }}
+    </div>
+
+    <script>
+        // Автообновление страницы каждые 2 минуты
+        setTimeout(() => location.reload(), 120000);
+    </script>
+</body>
+</html>
