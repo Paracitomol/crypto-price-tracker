@@ -7,7 +7,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 app = Flask(__name__)
 
 # Ваш ключ от Coinmarketcap (получите бесплатно на pro.coinmarketcap.com)
-CMC_API_KEY = "вставьте_ключ_здесь"
+CMC_API_KEY = "04530b24-633d-48d4-8c4c-75739deaf5d4"
 
 # Список отслеживаемых криптовалют
 CRYPTOS = [
